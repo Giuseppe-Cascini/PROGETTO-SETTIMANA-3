@@ -25,6 +25,8 @@
                 <input type="text" id="regista" placeholder="Inserisci regista" required>
                 <input type="number" id="anno" placeholder="Inserisci anno di uscita" min="1900" required>
                 <input type="number" step="0.1" id="valutazione" placeholder="Inserisci una valutazione(1-5)" min="1" max="5">
+                <label for="visto">Film già visto?</label>
+                <input type="checkbox" id="visto">
                 <button type="submit" id="btnAggiungi">Aggiungi film</button>
             </form>
         </section>
@@ -36,9 +38,7 @@
         </section>
 
         <section class="listaFilm">
-            <div id="contenitoreFilm">
-
-            </div>
+            <ul id="contenitoreFilm"></ul>
         </section>
 
     </main>
