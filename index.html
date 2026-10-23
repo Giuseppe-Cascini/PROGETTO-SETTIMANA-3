@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>La mia lista dei film</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>La mia lista dei film</h1>
+        <p>Aggiungi film che hai visto o vuoi vedere</p>
+        <button id="btnTemaScuro">Tema scuro</button>
+    </header>
+
+    <main>
+
+        <section class="form">
+            <form id="">
+                <input type="text" id="titolo" placeholder="Inserisci titolo">
+                <input type="text" id="attoreprincipale" placeholder="Inserisci attore principale">
+                <input type="text" id="regista" placeholder="Inserisci regista">
+                <input type="number" id="anno" placeholder="Inserisci anno di uscita">
+                <input type="number" id="valutazione" placeholder="Inserisci una valutazione(1-5)">
+                <button type="submit" id="btnAggiungi">Aggiungi film</button>
+            </form>
+        </section>
+
+        <section class="ricerca">
+            <form>
+                <input type="text" id="ricerca" placeholder="Cerca per titolo film, regista o attore principale...">
+            </form>
+        </section>
+
+        <section class="listaFilm">
+            <div id="contentioreFilm">
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy;Progetto 'La mia lista dei film' realizzato da Giuseppe Cascini</p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
