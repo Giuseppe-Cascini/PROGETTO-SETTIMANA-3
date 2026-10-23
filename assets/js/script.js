@@ -1,4 +1,5 @@
 const contenitoreFilm = document.querySelector('#contenitoreFilm');
+const formFilm = document.querySelector('#formFilm');
 
 const films = [
     {
@@ -36,7 +37,7 @@ const films = [
         regista: 'Brian De Palma',
         anno: 1983,
         valutazione: 4.1,
-        visto: true,
+        visto: false,
     },
     {
         id: 5,
@@ -45,20 +46,45 @@ const films = [
         regista: 'Christopher Nolan',
         anno: 2014,
         valutazione: 4.3,
-        visto: true,
+        visto: false,
     },
 ]
 
 //devo inserire la funzione
 
-   function render() {
+function render() {
     contenitoreFilm.textContent = '';
 
-    films.forEach((film)=> {
+    films.forEach((film) => {
         const infoFilm = document.createElement('li');
         contenitoreFilm.appendChild(infoFilm);
-        infoFilm.textContent = `${film.titolo}, ${film.attore}, ${film.regista}, ${film.anno}, ${film.valutazione}, ${film.visto}`;
+        infoFilm.textContent = `${film.titolo}, ${film.attore}, ${film.regista}, ${film.anno}, ${film.valutazione}, ${film.visto ? 'Visto' : 'Da vedere' }`;
 
-   })
-   }
-      render();
+        const btnElimina = document.createElement('button');
+        btnElimina.textContent = 'Elimina'
+
+    })
+}
+render();
+formFilm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const titolo = document.querySelector('#titolo').value;
+    const attore = document.querySelector('#attore').value;
+    const regista = document.querySelector('#regista').value;
+    const anno = Number(document.querySelector('#anno').value);
+    const valutazione = Number(document.querySelector('#valutazione').value);
+    const visto = document.querySelector('#visto').checked;
+
+    const nuovoFilm = {
+        titolo: titolo,
+        attore: attore,
+        regista: regista,
+        anno: anno,
+        valutazione: valutazione,
+        visto: visto,
+    };
+films.push(nuovoFilm);
+render();
+});
+
+
