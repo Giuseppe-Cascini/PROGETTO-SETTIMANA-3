@@ -45,3 +45,13 @@ button {
 }
 
 /* Scrivi qui sotto i tuoi stili */
+#contenitoreFilm {
+    display: inline-block;
+    border: 1px solid black;
+}
+header {
+    background-color: aquamarine;
+}
+footer {
+    background-color: brown;
+}

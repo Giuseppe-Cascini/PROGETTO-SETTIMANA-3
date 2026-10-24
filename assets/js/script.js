@@ -112,8 +112,13 @@ render();
         render();
     });
 
-  
-
+ 
 btnTemaScuro.addEventListener('click', (e) => {
     document.body.classList.toggle('dark');
+
+    if(document.body.classList.contains('dark')) {
+        btnTemaScuro.textContent = 'Tema chiaro'
+    } else {
+        btnTemaScuro.textContent = 'Tema scuro'
+    }
 })
