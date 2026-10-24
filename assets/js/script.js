@@ -1,5 +1,7 @@
 const contenitoreFilm = document.querySelector('#contenitoreFilm');
 const formFilm = document.querySelector('#formFilm');
+const ricerca = document.querySelector('#ricerca');
+const btnTemaScuro = document.querySelector('#btnTemaScuro')
 
 let films = [
     {
@@ -110,4 +112,8 @@ render();
         render();
     });
 
+  
 
+btnTemaScuro.addEventListener('click', (e) => {
+    document.body.classList.toggle('dark');
+})
