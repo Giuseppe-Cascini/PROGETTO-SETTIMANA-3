@@ -2,6 +2,7 @@ const contenitoreFilm = document.querySelector('#contenitoreFilm');
 const formFilm = document.querySelector('#formFilm');
 const ricerca = document.querySelector('#ricerca');
 const btnTemaScuro = document.querySelector('#btnTemaScuro')
+const contatore = document.querySelector('#contatore');
 
 let films = [
     {
@@ -56,6 +57,7 @@ let films = [
 
 function render(lista=films) {
     contenitoreFilm.textContent = '';
+     contatore.textContent = films.length;
 
     lista.forEach((film) => {
         const infoFilm = document.createElement('li');
