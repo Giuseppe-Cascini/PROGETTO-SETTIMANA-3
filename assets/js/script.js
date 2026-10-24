@@ -62,7 +62,7 @@ function render(lista=films) {
     lista.forEach((film) => {
         const infoFilm = document.createElement('li');
         contenitoreFilm.appendChild(infoFilm);
-        infoFilm.textContent = `Titolo:${film.titolo}, Attore principale: ${film.attore}, Regista: ${film.regista}, Anno di produzione:${film.anno}, Valutazione film:${film.valutazione}, ${film.visto ? 'Visto' : 'Da vedere'}`;
+        infoFilm.textContent = `Titolo: ${film.titolo}, Attore principale: ${film.attore}, Regista: ${film.regista}, Anno di produzione: ${film.anno}, Valutazione film: ${film.valutazione}, ${film.visto ? 'Visto' : 'Da vedere'}`;
 
         const btnElimina = document.createElement('button');
         btnElimina.textContent = 'Elimina'
