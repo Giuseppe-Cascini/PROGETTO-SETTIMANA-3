@@ -112,6 +112,7 @@ render();
         };
         films.push(nuovoFilm);
         render();
+        formFilm.reset();
     });
 
     ricerca.addEventListener('input', (e) => {
