@@ -43,7 +43,24 @@ button {
     border: 1px solid black;
     border-radius: 10px;
     text-align: center;
+    margin: 0 auto;
     padding: 15px;
+    width: 60%;
+
+}
+#contenitoreFilm li button {
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 6px;
+}
+#contenitoreFilm li button:first-of-type:hover {
+    background-color: red;
+    color: white;
+}
+#contenitoreFilm li button:last-of-type:hover {
+    background-color: orange;
+    color: white;
 }
 header {
     background-color:dodgerblue;
@@ -51,17 +68,39 @@ header {
     text-align: center;
 }
 footer {
-    background-color: brown;
+    background-color: dodgerblue;
     padding: 30px;
     text-align: center;
 }
 #btnTemaScuro {
     display: inline-block;
 }
+#btnAggiungi {
+    padding: 15px 25px;
+    color: whithe;
+    background-color: dodgerblue;
+    border-radius: 5px;
+}
+#btnAggiungi:hover {
+    background-color: #0056b3;
+}
 #formFilm input {
     padding:20px;
     border:1px solid #ccc;
-    border: radius 5px;
+    border-radius: 5px;
     font-size: 16px;
     width: 20%;
+}
+.formFilm input {
+    text-align: center;
+}
+#ricerca {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    width: 60%;
+}
+.ricerca {
+    text-align: center;
 }
