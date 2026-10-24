@@ -54,10 +54,10 @@ let films = [
 
 //devo inserire la funzione
 
-function render() {
+function render(lista=films) {
     contenitoreFilm.textContent = '';
 
-    films.forEach((film) => {
+    lista.forEach((film) => {
         const infoFilm = document.createElement('li');
         contenitoreFilm.appendChild(infoFilm);
         infoFilm.textContent = `${film.titolo}, ${film.attore}, ${film.regista}, ${film.anno}, ${film.valutazione}, ${film.visto ? 'Visto' : 'Da vedere'}`;
@@ -112,7 +112,22 @@ render();
         render();
     });
 
- 
+    ricerca.addEventListener('input', (e) => {
+        const testoCercato = ricerca.value.toLowerCase();
+        const filmCercato = films.filter((film) => {
+        if( film.titolo.toLowerCase().includes(testoCercato) ||
+            film.attore.toLowerCase().includes(testoCercato) ||
+            film.regista.toLowerCase().includes(testoCercato)) {   
+                return true
+            } else {
+                return false
+            }
+            
+    });
+    render(filmCercato);
+});    
+
+
 btnTemaScuro.addEventListener('click', (e) => {
     document.body.classList.toggle('dark');
 
@@ -121,4 +136,4 @@ btnTemaScuro.addEventListener('click', (e) => {
     } else {
         btnTemaScuro.textContent = 'Tema scuro'
     }
-})
+});
